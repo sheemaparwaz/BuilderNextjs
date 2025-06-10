@@ -64,10 +64,30 @@ export default function Page({
       {show404 ? (
         <DefaultErrorPage statusCode={404} />
       ) : (
-        <BuilderComponent model="netlify" content={page} />
+        <>
+          <BuilderComponent model="netlify" content={page} />
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              padding: '20px',
+              marginTop: '40px',
+              textAlign: 'center',
+            }}
+          >
+            <p
+              style={{
+                fontSize: '18px',
+                color: '#333',
+                margin: 0,
+              }}
+            >
+              Hello World
+            </p>
+          </div>
+        </>
       )}
-      
     </>
-
   )
 }
